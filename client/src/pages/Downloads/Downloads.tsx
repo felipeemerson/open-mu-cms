@@ -110,7 +110,7 @@ const DownloadsPage: React.FC<DownloadsPageProp> = () => {
               link="https://www.microsoft.com/pt-br/download/details.aspx?id=35"
               size="medium"
             >
-              <DirectXLogo className="w-36" />
+              <DirectXLogo className="h-20 w-36" />
             </ImageButton>
             <ImageButton
               link="https://learn.microsoft.com/pt-br/cpp/windows/latest-supported-vc-redist?view=msvc-170"

@@ -164,6 +164,33 @@ export const colors = {
   primary: primary, // or green or pink or blue
 ```
 
+<!-- THEMES -->
+## Themes
+
+### Green
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="Purple home page desktop light" src="./assets/green-light-desktop.png" width="400px">
+  <img alt="Purple home page desktop dark" src="./assets/green-dark-desktop.png" width="400px">
+  <img alt="Purple home page mobile light" src="./assets/green-light-mobile.png" width="200px">
+  <img alt="Purple home page mobile light" src="./assets/green-dark-mobile.png" width="200px">
+</p>
+
+### Blue
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="Purple home page desktop light" src="./assets/blue-light-desktop.png" width="400px">
+  <img alt="Purple home page desktop dark" src="./assets/blue-dark-desktop.png" width="400px">
+  <img alt="Purple home page mobile light" src="./assets/blue-light-mobile.png" width="200px">
+  <img alt="Purple home page mobile light" src="./assets/blue-dark-mobile.png" width="200px">
+</p>
+
+### Pink
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="Purple home page desktop light" src="./assets/pink-light-desktop.png" width="400px">
+  <img alt="Purple home page desktop dark" src="./assets/pink-dark-desktop.png" width="400px">
+  <img alt="Purple home page mobile light" src="./assets/pink-light-mobile.png" width="200px">
+  <img alt="Purple home page mobile light" src="./assets/pink-dark-mobile.png" width="200px">
+</p>
+
 <!-- LICENSE -->
 ## License
 

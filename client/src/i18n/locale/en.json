@@ -1,0 +1,386 @@
+{
+  "navigation": {
+    "home": "Home",
+    "registration": "Registration",
+    "downloads": "Downloads",
+    "news": "News",
+    "rankings": "Rankings",
+    "about": "About"
+  },
+  "sidebar": {
+    "loginCard": {
+      "title": "Login",
+      "form": {
+        "loginName": "Username",
+        "password": "Password",
+        "lostMyPassword": "Lost my password",
+        "submitButton": "Sign in",
+        "errorMessages": {
+          "required": "Required.",
+          "minimumLength": "The minimum length is {{minLength}} characters.",
+          "maximumLength": "The maximum length is {{maxLength}} characters.",
+          "loginOrPasswordIncorrectly": "Wrong username or password."
+        }
+      }
+    },
+    "accountCard": {
+      "title": "Account",
+      "menuOptions": {
+        "myAccount": "My account",
+        "addNews": "Add news",
+        "banners": "Banners",
+        "logout": "Logout"
+      }
+    },
+    "serverCard": {
+      "title": "Server",
+      "version": "Version",
+      "experience": "Exp.",
+      "masterExperience": "Master Exp.",
+      "drops": "Drop",
+      "accounts": "Accounts",
+      "guilds": "Guilds",
+      "playersOn": "Online Players"
+    },
+    "rankingsCard": {
+      "title": "Rankings",
+      "playersTab": "Players",
+      "guildsTab": "Guilds",
+      "button": "See more",
+      "playersTableColumns": {
+        "characterName": "Name",
+        "level": "LvL",
+        "resets": "Resets",
+        "emptyMessage": "No players"
+      },
+      "guildsTableColumns": {
+        "name": "Name",
+        "score": "Score",
+        "logo": "Logo",
+        "emptyMessage": "No guilds"
+      }
+    }
+  },
+  "footer": {
+    "copyright1": "MU Online © 2024. All rights reserved.",
+    "copyright2": "Mu is a registered trademark of WEBZEN, Inc.",
+    "developedBy": "Developed by"
+  },
+  "home": {
+    "newsTitle": "Latest News",
+    "eventsTitle": "Events",
+    "soonTitleCard": "Coming...",
+    "newsEmptyMessage": "No published news",
+    "newsReadMoreButton": "Read more",
+    "eventCard": {
+      "soon": "Soon...",
+      "countdown": {
+        "now": "Now"
+      }
+    }
+  },
+  "registration": {
+    "title": "Registration",
+    "subtitle": "Create your account to start your adventures at Mu Online!",
+    "registrationForm": {
+      "loginName": "Username",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm password",
+      "agreeWithTerms": "I have read and agreed to the terms and conditions.",
+      "submitButton": "Sign up",
+      "errorMessages": {
+        "accountAlreadyExists": "Username already exists.",
+        "emailAlreadyExists": "Email already exists.",
+        "invalidEmail": "Invalid email.",
+        "required": "Required.",
+        "minimumLength": "The minimum length is {{minLength}} characters.",
+        "maximumLength": "The maximum length is {{maxLength}} characters.",
+        "passwordShouldMatch": "The password and password confirmation must be the same."
+      },
+      "successMessages": {
+        "accountCreated": "Account created."
+      }
+    }
+  },
+  "downloads": {
+    "title": "Downloads",
+    "subtitle": {
+      "clientDownload": "Client download",
+      "additionalDownloads": "Additional downloads",
+      "installationGuide": "Installation guide",
+      "systemRequirements": "System requirements",
+      "drivers": "Graphic drivers"
+    },
+    "clientSize": "Size: about 500 MB.",
+    "fileFormat": "Format: zip.",
+    "systemRequirementsTable": {
+      "settings": "Settings",
+      "minimum": "Minimum",
+      "recommended": "Recommended",
+      "processor": "Processor",
+      "memory": "RAM",
+      "operatingSystem": "System",
+      "graphicsCard": "Graphic card",
+      "storage": "Storage",
+      "internet": "Internet"
+    }
+  },
+  "news": {
+    "title": "News",
+    "newsEmptyMessage": "No published news",
+    "newsItem": {
+      "creationDate": "Created at",
+      "lastUpdatedDate": "Updated at",
+      "postedBy": "Posted by"
+    },
+    "newsDeleteModal": {
+      "title": "Delete news",
+      "message": "Are you sure you want to delete the news",
+      "excludeButton": "Delete",
+      "cancelButton": "Cancel",
+      "successMessage": "News deleted."
+    }
+  },
+  "rankings": {
+    "title": "Rankings",
+    "playersTab": "Players",
+    "guildsTab": "Guilds",
+    "playersTable": {
+      "filterClass": "Class",
+      "all": "All",
+      "name": "Name",
+      "class": "Class",
+      "level": "Level",
+      "resets": "Resets",
+      "online": "Online",
+      "emptyMessage": "No players"
+    },
+    "guildsTableColumns": {
+      "name": "Name",
+      "logo": "Logo",
+      "score": "Score",
+      "guildMaster": "Guild Master",
+      "members": "Members",
+      "emptyMessage": "No guilds"
+    }
+  },
+  "about": {
+    "title": "About the Server",
+    "serverSettings": {
+      "title": "Server Settings",
+      "version": "Verion",
+      "experience": "Exp.",
+      "masterExperience": "Master Exp.",
+      "drops": "Drop",
+      "pointsPerLevel": "Points per Level",
+      "maxPoints": "Max. Points"
+    },
+    "resetSystem": {
+      "title": "Reset System",
+      "resetTypeLabel": "Reset Type",
+      "resetTypeValue": "Point-Based Reset",
+      "command": "Command",
+      "pointsPerReset": "Points per Reset",
+      "level": "Level",
+      "postResetLevel": "Level after Reset"
+    },
+    "commands": {
+      "title": "Commands",
+      "str": {
+        "label": "/add str <points>",
+        "value": "add points in strength"
+      },
+      "agi": {
+        "label": "/add agi <points>",
+        "value": "add points in agility"
+      },
+      "vit": {
+        "label": "/add vit <points>",
+        "value": "add points in vitality"
+      },
+      "ene": {
+        "label": "/add ene <points>",
+        "value": "add points in energy"
+      },
+      "cmd": {
+        "label": "/add cmd <points>",
+        "value": "add points in command"
+      },
+      "moveMap": {
+        "label": "/move <map>",
+        "value": "move to map"
+      }
+    },
+    "serverStatistics": {
+      "title": "Statistics",
+      "characters": "Characters",
+      "accounts": "Accounts",
+      "guilds": "Guilds",
+      "playersOn": "Online Players"
+    }
+  },
+  "onlines": {
+    "title": "Online Players",
+    "playersOn": "Online Players",
+    "staff": "Staff",
+    "emptyMessage": "No online players",
+    "table": {
+      "name": "Name",
+      "class": "Class",
+      "level": "Level",
+      "resets": "Resets"
+    }
+  },
+  "guild": {
+    "title": "Guild",
+    "backButton": "Back",
+    "guildMaster": "Guild Master",
+    "score": "Score",
+    "members": "Member(s)",
+    "table": {
+      "name": "Name",
+      "class": "Class",
+      "position": "Position",
+      "level": "LvL",
+      "resets": "Resets",
+      "online": "Online"
+    }
+  },
+  "account": {
+    "title": "My Account",
+    "welcome": "Welcome",
+    "data": "Personal Data",
+    "loginName": "Username",
+    "email": "Email",
+    "changePasswordButton": "Change Password",
+    "characters": "Characters",
+    "charactersTable": {
+      "name": "Name",
+      "class": "Class",
+      "level": "Level",
+      "resets": "Resets"
+    },
+    "changePasswordModal": {
+      "title": "Change password",
+      "form": {
+        "currentPassword": "Current password",
+        "nextPassword": "New password",
+        "confirmNextPassword": "Confirm new password",
+        "successMessage": "Password changed.",
+        "button": "Change",
+        "errorMessages": {
+          "required": "Required.",
+          "currentPasswordWrong": "Current password wrong.",
+          "minimumLength": "The minimum length is {{minLength}} characters.",
+          "maximumLength": "The maximum length is {{maxLength}} characters.",
+          "passwordShouldMatch": "Passwords should match."
+        }
+      }
+    }
+  },
+  "character": {
+    "title": "My Account",
+    "backButton": "Back",
+    "experience": {
+      "title": "Experience",
+      "level": "Level",
+      "resets": "Resets",
+      "resetButton": "Reset"
+    },
+    "location": {
+      "title": "Location",
+      "map": "Map",
+      "coordinates": "Coordinates"
+    },
+    "attributes": {
+      "title": "Attributes",
+      "pointsToAdd": "Points to add",
+      "str": "strength",
+      "agi": "agility",
+      "vit": "vitality",
+      "ene": "energy",
+      "cmd": "command",
+      "form": {
+        "errorMessages": {
+          "noPointsAdded": "No points to be added.",
+          "connectedAccount": "Disconnect from the game before adding points.",
+          "strAboveLimit": "Strength above the limit of {{limit}}.",
+          "agiAboveLimit": "Agilidade above the limit of {{limit}}.",
+          "vitAboveLimit": "Vitality above the limit of {{limit}}.",
+          "eneAboveLimit": "Energy above the limit of {{limit}}.",
+          "cmdAboveLimit": "Command above the limit of {{limit}}.",
+          "pointsAboveLimit": "The maximum points available are {{limit}}."
+        },
+        "successMessage": "Points added.",
+        "addPointsButton": "Add Points",
+        "saveButton": "Save",
+        "cancelButton": "Cancel"
+      }
+    },
+    "guild": {
+      "title": "Guild",
+      "emptyMessage": "None"
+    },
+    "class": "Class"
+  },
+  "newsForm": {
+    "title": "News",
+    "add": {
+      "title": "Create news",
+      "successMessage": "News created.",
+      "saveButton": "Create"
+    },
+    "edit": {
+      "title": "Edit news",
+      "successMessage": "News saved.",
+      "saveButton": "Save"
+    },
+    "titleField": "Title",
+    "content": "Content",
+    "author": "Author",
+    "showPreview": "Show preview",
+    "hidePreview": "Hide preview",
+    "cancelButton": "Cancel",
+    "form": {
+      "errorMessages": {
+        "required": "Required.",
+        "minimumLength": "The minimum length is {{minLength}} characters.",
+        "maximumLength": "The maximum length is {{maxLength}} characters."
+      }
+    }
+  },
+  "editBanners": {
+    "title": "Banners",
+    "emptyMessage": "No banners",
+    "subtitle": "Banner",
+    "imageUrl": "Image URL",
+    "hasLink": "Link?",
+    "link": "Link",
+    "isExternalLink": "External link?",
+    "orderIndex": "Order",
+    "addBannerButton": "Banner",
+    "showPreview": "Show preview",
+    "hidePreview": "Hide preview",
+    "cancelButton": "Cancel",
+    "saveButton": "Save",
+    "successMessage": "Banners changed.",
+    "errorMessages": {
+      "required": "Required.",
+      "minimum": "The minimum is {{min}}.",
+      "maximum": "The maximum is {{max}}."
+    }
+  },
+  "error": {
+    "title": "Error",
+    "homeButton": "Home"
+  },
+  "error404": {
+    "title": "Page not found",
+    "subtitle": "The requested page could not be found."
+  },
+  "error500": {
+    "title": "Server error",
+    "subtitle": "Try again later."
+  }
+}

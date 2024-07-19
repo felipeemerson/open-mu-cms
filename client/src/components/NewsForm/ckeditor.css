@@ -1,0 +1,12 @@
+.ck-content {
+  font-family: 'Inter';
+  word-break: break-word;
+}
+
+.ck-editor__editable_inline {
+  min-height: 320px;
+}
+
+.ck.ck-editor__main > .ck-editor__editable {
+  background-color: rgb(29, 27, 37); /* bg-neutral-900 */
+}

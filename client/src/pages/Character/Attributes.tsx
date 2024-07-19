@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { AxiosError } from 'axios';
 
@@ -115,17 +115,27 @@ const Attributes: React.FC<AttributesProps> = ({ character }) => {
         },
         onError: (error: Error) => {
           const errorAxios = error as AxiosError;
+          const errorMessage = errorAxios.response?.data as string;
 
-          if (
-            errorAxios.response?.data ===
-            'Disconnect from the game before do this'
-          ) {
+          if (errorMessage === 'Disconnect from the game before do this') {
             openToast.error(t('form.errorMessages.connectedAccount'));
+          } else if (errorMessage.includes('Not enough points available')) {
+            openToast.error(
+              t('form.errorMessages.notEnoughPoints', {
+                pointsAvailable: errorMessage.split(' ')[-1],
+              }),
+            );
           }
         },
       },
     );
   };
+
+  useEffect(() => {
+    reset();
+    setAttributes(character.attributes);
+    setLevelUpPoints(character.levelUpPoints);
+  }, [character.levelUpPoints, character.attributes, reset]);
 
   return (
     <>

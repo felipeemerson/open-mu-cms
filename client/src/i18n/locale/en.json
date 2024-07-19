@@ -292,7 +292,15 @@
       "title": "Experience",
       "level": "Level",
       "resets": "Resets",
-      "resetButton": "Reset"
+      "reset": {
+        "button": "Reset",
+        "successMessage": "Character reset successful.",
+        "errorMessages": {
+          "notEnoughZen": "You don't have enough zen. Zen required: {{requiredZen}}.",
+          "maximumResetsReached": "Reset limit reached: {{resetsLimit}}.",
+          "connectedAccount": "Disconnect from the game before reset."
+        }
+      }
     },
     "location": {
       "title": "Location",
@@ -316,7 +324,8 @@
           "vitAboveLimit": "Vitality above the limit of {{limit}}.",
           "eneAboveLimit": "Energy above the limit of {{limit}}.",
           "cmdAboveLimit": "Command above the limit of {{limit}}.",
-          "pointsAboveLimit": "The maximum points available are {{limit}}."
+          "pointsAboveLimit": "The maximum points available are {{limit}}.",
+          "notEnoughPoints": "Insufficient points, the available quantity is {{pointsAvailable}}."
         },
         "successMessage": "Points added.",
         "addPointsButton": "Add Points",

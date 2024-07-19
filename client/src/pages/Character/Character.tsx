@@ -56,16 +56,28 @@ const CharacterPage: React.FC<CharacterPageProps> = () => {
     resetMutation.mutate(characterData?.characterName as string, {
       onSuccess: (characterSuccess) => {
         onUpdateCharacter(characterSuccess);
-        openToast.success('Pontos distribuídos.');
+        openToast.success(t('experience.reset.successMessage'));
       },
       onError: (error: Error) => {
         const errorAxios = error as AxiosError;
+        const errorMessage = errorAxios.response?.data as string;
 
-        if (
-          errorAxios.response?.data ===
-          'Disconnect from the game before do this'
+        if (errorMessage === 'Disconnect from the game before do this') {
+          openToast.error(t('experience.reset.errorMessages.connectedAccount'));
+        } else if (
+          errorMessage.includes("You don't have enough money for reset")
         ) {
-          openToast.error('Desconecte-se do jogo antes de resetar.');
+          openToast.error(
+            t('experience.reset.errorMessages.notEnoughZen', {
+              requiredZen: errorMessage.split(' ').pop(),
+            }),
+          );
+        } else if (errorMessage.includes('Maximum resets of')) {
+          openToast.error(
+            t('experience.reset.errorMessages.maximumResetsReached', {
+              resetsLimit: errorMessage.split(' ').slice(-2)[0],
+            }),
+          );
         }
       },
     });
@@ -191,7 +203,7 @@ const CharacterPage: React.FC<CharacterPageProps> = () => {
                 disabled={character?.level != LEVEL_REQUIRED_TO_RESET}
                 onClick={onReset}
               >
-                {t('experience.resetButton')}
+                {t('experience.reset.button')}
               </Button>
             </div>
             <Attributes character={character} />

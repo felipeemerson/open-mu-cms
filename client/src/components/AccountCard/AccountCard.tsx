@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { jwtDecode } from 'jwt-decode';
+import { useQueryClient } from '@tanstack/react-query';
 
 import { AuthContext } from '@/contexts/AuthContext';
 import { AccountState, JWTPayload } from '@/api/types';
@@ -13,6 +14,7 @@ type AccountCardProps = Record<string, never>;
 
 const AccountCard: React.FC<AccountCardProps> = () => {
   const navigate = useNavigate();
+  const queryClient = useQueryClient();
   const { t } = useBaseTranslation('sidebar.accountCard');
   const { signOut, auth } = useContext(AuthContext);
 
@@ -47,7 +49,14 @@ const AccountCard: React.FC<AccountCardProps> = () => {
             </Button>
           </>
         )}
-        <Button variant="ghost1" styles="mx-auto" onClick={signOut}>
+        <Button
+          variant="ghost1"
+          styles="mx-auto"
+          onClick={() => {
+            signOut();
+            queryClient.resetQueries();
+          }}
+        >
           {t('menuOptions.logout')}
         </Button>
       </div>

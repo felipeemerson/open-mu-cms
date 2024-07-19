@@ -241,7 +241,13 @@
     "table": {
       "name": "Nome",
       "class": "Classe",
-      "position": "Posição",
+      "position": {
+        "title": "Posição",
+        "guildMaster": "Mestre da Guild",
+        "member": "Membro",
+        "undefine": "Indefinido",
+        "battleMaster": "Mestre de Batalha"
+      },
       "level": "LvL",
       "resets": "Resets",
       "online": "Online"

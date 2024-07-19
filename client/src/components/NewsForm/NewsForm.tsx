@@ -101,7 +101,7 @@ const NewsFormComponent: React.FC<NewsFormProps> = ({
 
     if (!isLoading && !isEditing) {
       setSelectOptions(characterOptions);
-      setValue('authorName', characterOptions[0].value);
+      setValue('authorName', characterOptions[0]?.value || '');
     } else if (!isLoading && isEditing) {
       setValue('authorName', news?.authorName as string);
       setValue('content', news?.content as string);
@@ -121,7 +121,7 @@ const NewsFormComponent: React.FC<NewsFormProps> = ({
         ]);
       }
     }
-  }, [isLoading, isEditing]);
+  }, [isLoading, isEditing, accountData]);
 
   return (
     <>

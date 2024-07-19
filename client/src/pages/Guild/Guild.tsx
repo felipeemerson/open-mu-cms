@@ -50,7 +50,7 @@ const GuildPage: React.FC<GuildPageProps> = () => {
       name: 'characterClassName',
     },
     {
-      label: t('table.position'),
+      label: t('table.position.title'),
       name: 'guildPosition',
     },
     {
@@ -67,12 +67,11 @@ const GuildPage: React.FC<GuildPageProps> = () => {
     },
   ];
 
-  GuildPosition.BATTLE_MASTER;
   const mapGuildPositionToLabel: Record<string, string> = {
-    [GuildPosition.GUILD_MASTER]: 'Mestre da Guild',
-    [GuildPosition.BATTLE_MASTER]: 'Mestre de Batalha',
-    [GuildPosition.NORMAL]: 'Membro',
-    [GuildPosition.UNDEFINE]: 'Indefinido',
+    [GuildPosition.GUILD_MASTER]: t('table.position.guildMaster'),
+    [GuildPosition.BATTLE_MASTER]: 'table.position.battleMaster',
+    [GuildPosition.NORMAL]: 'table.position.member',
+    [GuildPosition.UNDEFINE]: 'table.position.undefine',
   };
 
   return (

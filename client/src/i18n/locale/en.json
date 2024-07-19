@@ -241,7 +241,13 @@
     "table": {
       "name": "Name",
       "class": "Class",
-      "position": "Position",
+      "position": {
+        "title": "Position",
+        "guildMaster": "Guild Master",
+        "member": "Member",
+        "undefine": "Undefine",
+        "battleMaster": "Battle Master"
+      },
       "level": "LvL",
       "resets": "Resets",
       "online": "Online"

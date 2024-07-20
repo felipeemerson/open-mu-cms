@@ -265,7 +265,8 @@
       "name": "Name",
       "class": "Class",
       "level": "Level",
-      "resets": "Resets"
+      "resets": "Resets",
+      "emptyMessage": "No characters"
     },
     "changePasswordModal": {
       "title": "Change password",

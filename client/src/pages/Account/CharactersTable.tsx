@@ -6,6 +6,7 @@ import Typography from '@/components/Typography/Typography';
 
 import type { AccountCharacter } from '@/api/types';
 import useBaseTranslation from '@/hooks/use-base-translation';
+import TableEmptyMessage from '@/components/Table/TableEmptyMessage/TableEmptyMessage';
 
 type CharactersTableProps = {
   characters: AccountCharacter[];
@@ -35,40 +36,44 @@ const CharactersTable: React.FC<CharactersTableProps> = ({ characters }) => {
   return (
     <>
       <Table columns={columns} withIndex>
-        {characters.map((row, index) => (
-          <tr
-            key={index}
-            className={`border-b ${
-              characters.length != index + 1
-                ? 'border-neutral-300 dark:border-primary-400'
-                : 'border-primary-950 dark:border-primary-50'
-            }`}
-          >
-            <Typography
-              component="th"
-              variant="label3-s"
-              styles="text-primary-950 dark:text-primary-50"
+        {characters.length === 0 ? (
+          <TableEmptyMessage message={t('emptyMessage')} type="page" />
+        ) : (
+          characters.map((row, index) => (
+            <tr
+              key={index}
+              className={`border-b ${
+                characters.length != index + 1
+                  ? 'border-neutral-300 dark:border-primary-400'
+                  : 'border-primary-950 dark:border-primary-50'
+              }`}
             >
-              {index + 1}
-            </Typography>
-            <td className="text-center">
-              <Link to={`/my-account/characters/${row.characterName}`}>
-                {row.characterName}
-              </Link>
-            </td>
-
-            {columns.slice(1, 4).map((column, colIndex) => (
               <Typography
-                component="td"
-                key={colIndex}
-                variant="label3-r"
-                styles="text-primary-950 dark:text-primary-50 text-center"
+                component="th"
+                variant="label3-s"
+                styles="text-primary-950 dark:text-primary-50"
               >
-                {row[column.name]}
+                {index + 1}
               </Typography>
-            ))}
-          </tr>
-        ))}
+              <td className="text-center">
+                <Link to={`/my-account/characters/${row.characterName}`}>
+                  {row.characterName}
+                </Link>
+              </td>
+
+              {columns.slice(1, 4).map((column, colIndex) => (
+                <Typography
+                  component="td"
+                  key={colIndex}
+                  variant="label3-r"
+                  styles="text-primary-950 dark:text-primary-50 text-center"
+                >
+                  {row[column.name]}
+                </Typography>
+              ))}
+            </tr>
+          ))
+        )}
       </Table>
     </>
   );

@@ -4,7 +4,6 @@ import { useMutation, useQuery } from '@tanstack/react-query';
 import { Banner } from './types';
 
 const getBanners = async (): Promise<Banner[]> => {
-  console.log('api:', import.meta.env.VITE_API_URL);
   const response = await api.get('/banners');
   return response.data;
 };

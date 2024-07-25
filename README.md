@@ -25,6 +25,15 @@
         <li><a href="#pre-requisites">Pre-requisites</li>
         <li><a href="#running-server">Running server (Development)</li>
         <li><a href="#running-client">Running client (Development)</li>
+        <li><a href="#deployment">Deployment</li>
+      </ul>
+    </li>
+    <li>
+      <a href="#themes">Themes</a>
+      <ul>
+        <li><a href="#green">Green</li>
+        <li><a href="#blue">Blue</li>
+        <li><a href="#pink">Pink</li>
       </ul>
     </li>
     <li><a href="#license">License</a></li>
@@ -148,6 +157,10 @@ You can change between theme colors in the file `client/src/public/colors.ts`. T
 export const colors = {
   primary: primary, // or green or pink or blue
 ```
+
+### Deployment
+
+Initially, there are two deployment options with OpenMU included: [Local Testing](https://github.com/felipeemerson/open-mu-cms/blob/main/deploy/local-testing/README.md) and [Production](https://github.com/felipeemerson/open-mu-cms/blob/main/deploy/production/README.md).
 
 <!-- THEMES -->
 

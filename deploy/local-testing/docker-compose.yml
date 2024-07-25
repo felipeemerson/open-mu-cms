@@ -1,0 +1,77 @@
+version: '3'
+
+services:
+  cms-nginx:
+    container_name: cms
+    build:
+      dockerfile: Dockerfile.dev
+      context: ../client
+    ports:
+      - "8080:5173"
+    depends_on:
+      - cms-api
+
+  cms-api:
+    container_name: cms-api
+    build:
+      dockerfile: Dockerfile
+      context: ../server
+    environment:
+      DB_HOST: database
+      DB_PORT: 5432
+      DB_NAME: openmu
+      DB_USERNAME: postgres
+      DB_PASSWORD: admin
+      ADMIN_PANEL_HOST: http://openmu-startup
+      ADMIN_PANEL_PORT: 8080
+      ADMIN_PANEL_USERNAME: admin
+      ADMIN_PANEL_PASSWORD: openmu
+    ports:
+      - "8081:8080"
+    depends_on:
+      - database
+
+  nginx-80:
+    container_name: nginx-80
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    depends_on:
+      - openmu-startup
+    volumes:
+      - ./nginx.dev.conf:/etc/nginx/nginx.conf:ro
+      - ./.htpasswd:/etc/nginx/.htpasswd
+
+  openmu-startup:
+    image: munique/openmu
+    container_name: openmu-startup
+    ports:
+      - "8080"
+      - "55901:55901"
+      - "55902:55902"
+      - "55903:55903"
+      - "44405:44405"
+      - "55980:55980"
+    environment:
+      DB_HOST: database
+      ASPNETCORE_URLS: http://+:8080
+    working_dir: /app/
+    volumes:
+      - ./.htpasswd:/etc/nginx/.htpasswd
+    depends_on:
+      - database
+
+  database:
+    image: postgres
+    container_name: database
+    environment:
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: openmu
+      POSTGRES_USER: postgres
+    ports:
+      - "5432"
+    volumes:
+      - dbdata:/var/lib/postgresql/data #store data on volume
+
+volumes:
+  dbdata:

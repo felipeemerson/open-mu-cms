@@ -19,7 +19,7 @@ A	admin	0	<your-ip>	14400
 A	api	0	<your-ip>	14400
 ```
 
-Next, set all env variables needed for `client/.env`, **VITE_API_URL** must be equal to **https://api.*DOMAIN_NAME***.
+Next, set all env variables needed for `client/.env`, **VITE_API_URL** must be equal to **https://api.DOMAIN_NAME**.
 
 Finally, run certbot changing DOMAIN_NAME with your domain name:
 
@@ -34,4 +34,5 @@ docker compose up -d
 ```
 
 ## Running in a ARM environment
+
 If you are running in a ARM environment, replace the `Dockerfile` of the `client` with the `Dockerfile.arm.client` file (renaming it to just Dockerfile) and do the same for the `server` with the `Dockerfile.arm.server` file.

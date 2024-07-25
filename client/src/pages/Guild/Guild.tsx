@@ -69,9 +69,9 @@ const GuildPage: React.FC<GuildPageProps> = () => {
 
   const mapGuildPositionToLabel: Record<string, string> = {
     [GuildPosition.GUILD_MASTER]: t('table.position.guildMaster'),
-    [GuildPosition.BATTLE_MASTER]: 'table.position.battleMaster',
-    [GuildPosition.NORMAL]: 'table.position.member',
-    [GuildPosition.UNDEFINE]: 'table.position.undefine',
+    [GuildPosition.BATTLE_MASTER]: t('table.position.battleMaster'),
+    [GuildPosition.NORMAL]: t('table.position.member'),
+    [GuildPosition.UNDEFINE]: t('table.position.undefine'),
   };
 
   return (

@@ -41,6 +41,7 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
 
   const onChangeLangague = (newLanguage: string) => {
     if (language !== newLanguage) {
+      localStorage.setItem('language', newLanguage);
       changeLanguage(newLanguage);
     }
 

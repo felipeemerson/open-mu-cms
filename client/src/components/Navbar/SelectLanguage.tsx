@@ -15,6 +15,7 @@ const SelectLanguage: React.FC<SelectLanguageProps> = () => {
 
   const onChangeLangague = (newLanguage: string) => {
     if (language !== newLanguage) {
+      localStorage.setItem('language', newLanguage);
       changeLanguage(newLanguage);
     }
 

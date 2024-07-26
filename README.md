@@ -46,12 +46,10 @@
 
 This project consists of a CMS specifically developed to work with [MUnique OpenMU](https://github.com/MUnique/OpenMU). The CMS includes a client developed with React and a server developed with Spring Boot.
 
-<!-- LAYOUT -->
-
-## Layout
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+<!-- LAYOUT -->
 ## Layout
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
@@ -60,6 +58,8 @@ This project consists of a CMS specifically developed to work with [MUnique Open
   <img alt="Purple home page mobile light" src="./assets/purple-light-mobile.png" width="200px">
   <img alt="Purple home page mobile light" src="./assets/purple-dark-mobile.png" width="200px">
 </p>
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- FEATURES -->
 
@@ -160,7 +160,9 @@ export const colors = {
 
 ### Deployment
 
-Initially, there are two deployment options with OpenMU included: [Local Testing](https://github.com/felipeemerson/open-mu-cms/blob/main/deploy/local-testing/README.md) and [Production](https://github.com/felipeemerson/open-mu-cms/blob/main/deploy/production/README.md).
+Initially, there are two deployment options with OpenMU included: [Local Testing](https://github.com/felipeemerson/open-mu-cms/blob/main/deploy/local-testing/) and [Production](https://github.com/felipeemerson/open-mu-cms/blob/main/deploy/production/).
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- THEMES -->
 
@@ -192,6 +194,8 @@ Initially, there are two deployment options with OpenMU included: [Local Testing
   <img alt="Purple home page mobile light" src="./assets/pink-light-mobile.png" width="200px">
   <img alt="Purple home page mobile light" src="./assets/pink-dark-mobile.png" width="200px">
 </p>
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- LICENSE -->
 

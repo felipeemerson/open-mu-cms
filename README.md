@@ -46,10 +46,10 @@
 
 This project consists of a CMS specifically developed to work with [MUnique OpenMU](https://github.com/MUnique/OpenMU). The CMS includes a client developed with React and a server developed with Spring Boot.
 
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- LAYOUT -->
+
 ## Layout
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
@@ -67,6 +67,7 @@ This project consists of a CMS specifically developed to work with [MUnique Open
 
 - [x] Create account
 - [x] Login
+- [ ] Recover password
 - [x] Change password
 - [x] Create/edit/update/remove banners (only Game Masters)
 - [x] Create/edit/update/remove news (only Game Masters)
@@ -81,7 +82,7 @@ This project consists of a CMS specifically developed to work with [MUnique Open
 - [x] Internationalization (with english and portuguese locales)
 - [x] Dark and Light theme
 - [x] Three color palettes
-- [ ] Docker deploy files wih OpenMU
+- [x] Docker deploy files wih OpenMU
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

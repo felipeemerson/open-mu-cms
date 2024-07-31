@@ -19,7 +19,7 @@ const Toast: React.FC<ToastProps> = () => {
       closeToast();
     }, duration);
     return () => clearTimeout(timer);
-  }, [open]);
+  }, [open, duration, closeToast]);
 
   return (
     <>

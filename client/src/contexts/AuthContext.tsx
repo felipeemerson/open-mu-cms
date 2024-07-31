@@ -1,4 +1,5 @@
 import { createContext, ReactNode, useEffect, useState } from 'react';
+import { jwtDecode } from 'jwt-decode';
 
 export const enum AuthStateEnum {
   SIGNED_IN,
@@ -18,11 +19,15 @@ type Auth = {
 };
 
 const getAuth = (): AuthState => {
+  const currentTime = Math.floor(Date.now() / 1000);
   const token = localStorage.getItem('token');
+  const expiration = (token && jwtDecode(token).exp) || 0;
+  const isExpiredToken = expiration < currentTime;
 
-  if (token) {
+  if (token && !isExpiredToken) {
     return { state: AuthStateEnum.SIGNED_IN, token };
   } else {
+    localStorage.removeItem('token');
     return { state: AuthStateEnum.UNKNOWN };
   }
 };

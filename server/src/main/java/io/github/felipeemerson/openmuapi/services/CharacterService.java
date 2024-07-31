@@ -146,7 +146,7 @@ public class CharacterService {
         int pointsAvailable = character.getLevelUpPoints();
 
         int sumAllAttributes = characterAttributesDTO.getStrength() + characterAttributesDTO.getAgility() +
-                                characterAttributesDTO.getAgility() + characterAttributesDTO.getEnergy() +
+                                characterAttributesDTO.getVitality() + characterAttributesDTO.getEnergy() +
                                 characterAttributesDTO.getCommand();
 
         if (sumAllAttributes > pointsAvailable) {

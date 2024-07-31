@@ -122,16 +122,19 @@ const Attributes: React.FC<AttributesProps> = ({ character }) => {
           } else if (errorMessage.includes('Not enough points available')) {
             openToast.error(
               t('form.errorMessages.notEnoughPoints', {
-                pointsAvailable: errorMessage.split(' ')[-1],
+                pointsAvailable: errorMessage.split(' ').pop(),
               }),
             );
           }
+
+          reset(data);
         },
       },
     );
   };
 
   useEffect(() => {
+    console.log('effect');
     reset();
     setAttributes(character.attributes);
     setLevelUpPoints(character.levelUpPoints);

@@ -42,16 +42,15 @@ const NewsFormComponent: React.FC<NewsFormProps> = ({
   const createMutation = useCreateNews();
   const updateMutation = useUpdateNews();
 
-  const { control, handleSubmit, watch, setValue, getValues } =
-    useForm<NewsForm>({
-      criteriaMode: 'all',
-      mode: 'all',
-      defaultValues: {
-        title: '',
-        authorName: '',
-        content: '',
-      },
-    });
+  const { control, handleSubmit, watch, setValue } = useForm<NewsForm>({
+    criteriaMode: 'all',
+    mode: 'all',
+    defaultValues: {
+      title: '',
+      authorName: '',
+      content: '',
+    },
+  });
 
   const onShowPreview = (event: React.MouseEvent) => {
     event.preventDefault();
@@ -189,7 +188,7 @@ const NewsFormComponent: React.FC<NewsFormProps> = ({
               </Typography>
               <RichTextCKEditor
                 control={control}
-                initialValue={getValues('content')}
+                initialValue={news?.content}
               />
             </div>
             {watch('content') && (

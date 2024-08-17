@@ -134,7 +134,7 @@ const NewsFormComponent: React.FC<NewsFormProps> = ({
         >
           {isEditing ? t('edit.title') : t('add.title')}
         </Typography>
-        {isLoading || (isEditing && content === '') ? (
+        {isLoading || (isEditing && news?.content === '') ? (
           <div className="flex h-80 items-center justify-center">
             <LoadingSpinner />
           </div>
